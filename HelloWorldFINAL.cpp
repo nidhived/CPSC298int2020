@@ -1,10 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main(int argc, cahr **argv){
 
-  cout << "Hello World" << endl;
-  cout << "I had to add this statement since Rene said so...";
-  cout << "adding 1 more";
+  cout << "command line arg count:" << argc << endl;
+  if (argc < 2){
+    cout << "invalid usage. pls provide input" << endl;
+    exit(-1);
+  }
+  cout << "hello world. my name is: " <<argv[1] << endl;
+//  cout << "adding 1 more";
   return 0;
 }
